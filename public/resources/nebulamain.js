@@ -1,4 +1,4 @@
-// Welcome to the main Nebula script
+// Welcome to the main Unblocker script
 // This script handles all the tasks neccesary for a proxy.
 // What this doesn't include is the actual proxies, just the neccesary tasks in order for the proxies to be able to preform, such as registering the service worker required by Interception proxies.
 
@@ -167,13 +167,13 @@ window.addEventListener("load", () => {
               const _popout = window.open("/blob", "_self");
               const blob = _popout.document;
               // Write all of the neccesary page elements, and the Options including the cloak (if enabled)
-              // The blob writing is just the background elements, like the "Nebula is loading your content, please wait" screen. It does not carry proxied content, or even the iframe.
+              // The blob writing is just the background elements, like the "Unblocker is loading your content, please wait" screen. It does not carry proxied content, or even the iframe.
               blob.write(`
            <script> 
            function handleTabLeave(activeInfo) {
   var link = document.querySelector("link[rel~='icon']");
   if (localStorage.getItem('ADVcloak') == "on") {
-  if (document.title == "Nebula") {
+  if (document.title == "Unblocker") {
     if (!link) {
     link = document.createElement('link');
     link.rel = 'icon';
@@ -182,7 +182,7 @@ window.addEventListener("load", () => {
 link.href = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo7AE3IF34XPGyseQjkXIOsWXpkZiLlMjSAwySjcJSPAwlv3hnGKi1&usqp=CAU';
     document.title = "Google"
   } else if (document.title == "Google") {
-    document.title = "Nebula"
+    document.title = "Unblocker"
     if (!link) {
     link = document.createElement('link');
     link.rel = 'icon';
@@ -199,7 +199,7 @@ document.addEventListener("visibilitychange", handleTabLeave)
           
            <style>@import "https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap";/* CSSTidy 1.5.2: Fri, 11 Nov 2022 17:13:44 +0000 */body{background:#191724;color:#fff}div{margin-top:30px;font-size:100px;text-align:center;font-family:"Roboto";font-weight:700}.loader .b1{left:42%}.loader .b2{left:50%;animation-delay:100ms}.loader .b3{left:58%;animation-delay:200ms;color:#eb6f92}.loader .b1,.loader .b2,.loader .b3{width:10px;height:30px;position:absolute;top:50%;transform:rotate(0);animation-name:spinify;animation-duration:1600ms;animation-iteration-count:infinite;color:#eb6f92;background-color:#eb6f92}@keyframes spinify{0%{transform:translate(0px,0px)}33%{transform:translate(0px,24px);border-radius:100%;width:10px;height:10px}66%{transform:translate(0px,-16px)}88%{transform:translate(0px,4px)}100%{transform:translate(0px,0px)}}</style> 
            <div class="loader">
-  <div>Nebula is loading your content!</div>
+  <div>Unblocker is loading your content!</div>
   <div style='font-size:35px;'>Please wait</div>
   <div class="b1"></div> 
   <div class="b2"></div>
@@ -224,8 +224,8 @@ document.addEventListener("visibilitychange", handleTabLeave)
               blob.head.appendChild(arcSrc);
               img.rel = "icon";
               img.href =
-                "https://static.nebulacdn.xyz/content/images/nebula_logo_619x619.png";
-              blob.title = "Nebula";
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Google_Classroom_Logo.svg/512px-Google_Classroom_Logo.svg.png?20221017163738";
+              blob.title = "Unblocker";
               // slice the link like some nice fruit :)
               // Removing the '/' from 'whateverthislinkis.gay/'
               //                                              ^
@@ -307,7 +307,7 @@ if (tryAbTitle === null) {
           const link = location.href;
           img.rel = "icon";
           img.href  = ABFavicon || "https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png";
-          doc.title = ABTitle || "Nebula";
+          doc.title = ABTitle || "Unblocker";
 
           var currentLink = link.slice(0, link.length - 1);
 
@@ -380,14 +380,14 @@ function log() {
   setTimeout(
     console.log.bind(
       console,
-      "%cWelcome To Nebula",
+      "%cWelcome To Unblocker",
       "background: #3F51B5;color:#FFF;padding:5px;border-radius: 5px;line-height: 26px; font-size:30px;"
     )
   );
   setTimeout(
     console.log.bind(
       console,
-      "%c If you are seeing this, Nebula's main script has succesfully loaded!",
+      "%c If you are seeing this, Unblocker's main script has succesfully loaded!",
       "background: green;color:#FFF;padding:5px;border-radius: 5px;line-height: 26px; font-size:12px;"
     )
   );
@@ -671,7 +671,7 @@ browser = chrome;
 function handleTabLeave() {
   var link = document.querySelector("link[rel~='icon']");
   if (localStorage.getItem("ADVcloak") == "on") {
-    if (document.title == "Nebula") {
+    if (document.title == "Unblocker") {
       if (!link) {
         link = document.createElement("link");
         link.rel = "icon";
@@ -681,14 +681,14 @@ function handleTabLeave() {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo7AE3IF34XPGyseQjkXIOsWXpkZiLlMjSAwySjcJSPAwlv3hnGKi1&usqp=CAU";
       document.title = "Google";
     } else if (document.title == "Google") {
-      document.title = "Nebula";
+      document.title = "Unblocker";
       if (!link) {
         link = document.createElement("link");
         link.rel = "icon";
         document.getElementsByTagName("head")[0].appendChild(link);
       }
       link.href =
-        "https://camo.githubusercontent.com/b565ae2e136e0ac6023e7099288a62382de7c2b8cdce86a8b90449b86649434c/68747470733a2f2f6e6562756c6170726f78792e6e6562756c612e62696f2f696d616765732f6c6f676f2e706e67";
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Google_Classroom_Logo.svg/512px-Google_Classroom_Logo.svg.png?20221017163738";
     } else {
       return false;
     }
